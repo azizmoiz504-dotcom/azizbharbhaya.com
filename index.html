@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aziz Barbhaya | Be Unstoppable</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#544600",
+                        "surface-container-low": "#1c1b1b",
+                        "surface": "#131313",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "secondary-container": "#4b8eff",
+                        "error": "#ffb4ab",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary": "#002e69",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-container": "#636465",
+                        "surface-container-highest": "#353534",
+                        "error-container": "#93000a",
+                        "surface-variant": "#353534",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#e5e2e1",
+                        "secondary": "#adc6ff",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "primary-fixed": "#e2e2e2",
+                        "on-surface-variant": "#c4c7c8",
+                        "secondary-fixed": "#d8e2ff",
+                        "on-error": "#690005",
+                        "background": "#131313",
+                        "surface-bright": "#3a3939",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed": "#001a41",
+                        "on-primary-fixed-variant": "#454747",
+                        "tertiary": "#ffffff",
+                        "on-primary": "#2f3131",
+                        "on-background": "#e5e2e1",
+                        "outline-variant": "#444748",
+                        "tertiary-container": "#ffe16d",
+                        "on-tertiary-fixed": "#221b00",
+                        "primary": "#ffffff",
+                        "surface-tint": "#c6c6c6",
+                        "surface-dim": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-primary": "#5d5f5f",
+                        "surface-container": "#201f1f",
+                        "on-primary-fixed": "#1a1c1c",
+                        "tertiary-fixed": "#ffe16d",
+                        "on-tertiary-container": "#776300",
+                        "primary-container": "#e2e2e2",
+                        "on-tertiary": "#3a3000",
+                        "on-secondary-container": "#00285c",
+                        "on-secondary-fixed-variant": "#004493",
+                        "tertiary-fixed-dim": "#e9c400",
+                        "outline": "#8e9192"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "section-gap": "160px",
+                        "margin-desktop": "80px",
+                        "container-max": "1440px",
+                        "gutter": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "label-sm": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "display-xl": ["Montserrat"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", {"lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "160%", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "120%", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "100%", "fontWeight": "500"}],
+                        "label-bold": ["14px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "120%", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display-xl": ["96px", {"lineHeight": "100%", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                        "body-md": ["16px", {"lineHeight": "150%", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0e0e0e;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(40px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .chrome-button {
+            background: linear-gradient(135deg, #ffffff 0%, #e2e2e2 100%);
+            color: #131313;
+            transition: all 0.3s ease;
+        }
+        .chrome-button:hover {
+            box-shadow: 0 0 40px rgba(75, 142, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        .ghost-button {
+            border: 1px solid #8e9192;
+            transition: all 0.3s ease;
+        }
+        .ghost-button:hover {
+            border-color: #ffffff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+        .glow-blue {
+            filter: drop-shadow(0 0 20px rgba(75, 142, 255, 0.4));
+        }
+        .section-fade {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+        .text-glow {
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-body-md">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-outline-variant/20 shadow-2xl">
+<div class="flex justify-between items-center px-margin-desktop py-6 max-w-container-max mx-auto">
+<a class="font-display-lg text-body-lg font-black tracking-tighter text-primary" href="#">AZIZ BARBHAYA</a>
+<div class="hidden md:flex gap-unit*4 items-center">
+<a class="font-display-lg text-label-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#ventures">Ventures</a>
+<span class="w-1 h-1 bg-outline-variant/50 rounded-full mx-4"></span>
+<a class="font-display-lg text-label-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#story">Story</a>
+<span class="w-1 h-1 bg-outline-variant/50 rounded-full mx-4"></span>
+<a class="font-display-lg text-label-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#awards">Awards</a>
+<span class="w-1 h-1 bg-outline-variant/50 rounded-full mx-4"></span>
+<a class="font-display-lg text-label-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#media">Media</a>
+<span class="w-1 h-1 bg-outline-variant/50 rounded-full mx-4"></span>
+<a class="font-display-lg text-label-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<button class="chrome-button px-6 py-2 font-label-bold rounded-lg uppercase tracking-widest text-xs">Invest Now</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative flex items-center justify-center overflow-hidden min-h-screen">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background z-10"></div>
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(75,142,255,0.05)_0%,transparent_70%)]"></div>
+</div>
+<div class="container mx-auto px-margin-desktop relative z-20 flex flex-col items-center py-24 md:py-32">
+<div class="relative mb-8 group rounded-full overflow-hidden">
+<div class="absolute -inset-4 bg-primary/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+<img alt="Aziz Barbhaya" class="object-cover rounded-full border border-white/10 transition-all duration-1000 ease-in-out shadow-[0_0_100px_rgba(255,255,255,0.1)] aspect-square w-[280px] md:w-[420px] max-w-full" src="https://lh3.googleusercontent.com/aida/ADBb0ujnqBRmcKoTitljkOJ2AuVjBcsILJLEr10cIl_K7AfCi2NdcPPtNLEH-WFjpTtEMcXq4_jUuSc5UvWEuOf7z7N8nI-FtxFbpqsD8DQP-QDeuIJuOB3JzRXut-TsP0ZAOp73LS-s6K_unmCh2ZjD_u005ztB9dRhcI1JAPHW2-uIVVpSVbZPx3dhjenQAPhD62hv4BpBYLwD1VrwnluVicxD-CkPnvHdC0ahi5jAiSLri3LVnz4OgukZ4ejkhYSiBdV8UOVyBd65MQ"/>
+</div>
+<h1 class="font-display-xl text-center text-glow uppercase select-none text-5xl md:text-display-xl">AZIZ BARBHAYA</h1>
+<p class="font-display-lg text-headline-lg mt-4 text-primary tracking-[0.4em] uppercase opacity-80">BE UNSTOPPABLE.</p>
+<p class="font-body-lg text-body-lg mt-2 text-on-surface-variant tracking-wider">Entrepreneur • Visionary • Brand Builder • UN Diplomat</p>
+<div class="flex gap-6 mt-12">
+<a class="chrome-button px-10 py-4 font-label-bold rounded-full uppercase tracking-widest" href="#ventures">Explore Ventures</a>
+<a class="ghost-button px-10 py-4 font-label-bold rounded-full uppercase tracking-widest text-primary" href="#contact">Book Aziz</a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
+<span class="material-symbols-outlined text-3xl">expand_more</span>
+</div>
+</header>
+<!-- Business Empire (Luxury Showcase) -->
+<section class="py-section-gap bg-surface-container-lowest" id="ventures">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-24">
+<div>
+<span class="font-label-bold text-primary tracking-[0.5em] uppercase mb-4 block">The Portfolio</span>
+<h2 class="font-display-lg text-display-lg uppercase">Business Empire</h2>
+</div>
+<div class="hidden md:block w-1/3 text-right">
+<p class="font-body-md text-on-surface-variant italic">"Success is not about being the best, it's about being the only one who does what you do."</p>
+</div>
+</div>
+<!-- Venture 1: Foilers Dubai -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-section-gap items-center">
+<div class="lg:col-span-7 relative group">
+<div class="absolute -inset-2 bg-gradient-to-r from-primary/10 to-transparent blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+<div class="aspect-[16/9] overflow-hidden rounded-lg">
+<img alt="Foilers Dubai" class="w-full h-full object-cover hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida/ADBb0ui1qmXqQkZr2nVdMvMMWXHeWXe2kFP-lBeQ0v5ppJHwsg80rbP7n08Rud0Aw56nCGa8SOXodnHmS3x_2Oc8uQZ228iyaFMaqnSvBhz24TmOUIz_CvwxshZOetdMuDJ613m-97nsuIEboApui_s-1tQCpUqw_6pm0EJ4OTrRGiSFyvLMna0o2b2CqFmjf6Klbryqhrm8e3WIP-inpOLvuTfXrRq3tZzKQrpPcytN3frGVTKsECl-EUc4idX7hHc2CGwLikiK7YC3"/>
+</div>
+</div>
+<div class="lg:col-span-5 lg:pl-12">
+<h3 class="font-display-lg text-display-lg uppercase mb-6">Foilers Dubai</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">
+                        Redefining automotive luxury in the heart of Dubai. Foilers is the premier destination for high-end car wrapping and paint protection, serving the city's most elite supercar collectors.
+                    </p>
+<div class="flex gap-8 border-t border-outline-variant/30 pt-10">
+<div>
+<span class="block font-display-lg text-headline-lg text-primary">100K+</span>
+<span class="font-label-bold uppercase text-xs text-on-surface-variant">Followers</span>
+</div>
+<div>
+<span class="block font-display-lg text-headline-lg text-primary">Elite</span>
+<span class="font-label-bold uppercase text-xs text-on-surface-variant">Clientele</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Venture 2: KEFI Dubai -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-section-gap items-center">
+<div class="lg:col-span-5 lg:order-1 order-2 lg:pr-12">
+<h3 class="font-display-lg text-display-lg uppercase mb-6">KEFI Dubai</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">
+                        A sanctuary for thinkers, players, and coffee connoisseurs. KEFI merges specialty coffee with the world of board games and literature, creating a unique cultural hub in the UAE.
+                    </p>
+<a class="ghost-button px-8 py-3 font-label-bold uppercase tracking-widest text-xs inline-block" href="#">Experience KEFI</a>
+</div>
+<div class="lg:col-span-7 lg:order-2 order-1">
+<div class="aspect-[16/9] overflow-hidden rounded-lg">
+<img alt="KEFI Dubai" class="w-full h-full object-cover hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida/ADBb0uh8ZXalJhsbtngenlVfZWNDGWbzUxGDHDLYHxiLyiJYGkFILtSpHxgeu-HFG7KbmgOtRnIrZdHFD03BtWvypkogWNPha9t171UBMgQ-f0GDXbnZvwjWVPeFdUvk-tre9aW1KBgLgk4KRAmQxZrV6plZ9RKEJQZA_9_UVaMkA8Pv9MFN0kPAM0wjsBB2aE3h3Mio6SRObMe6tglFVkt_Lb4sYHaboSH4MuPscExhogh2hxgB0zvDBjla2Bj01TqJLz9qs9_v-u2yQQ"/>
+</div>
+</div>
+</div>
+<!-- Venture 3: Alraj DXB -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7 relative">
+<div class="aspect-[16/9] overflow-hidden rounded-lg">
+<img alt="Alraj DXB" class="w-full h-full object-cover hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida/ADBb0ujuA8Zu9-YufULPlMh2OqZQZSZ3hYU_XSwIxJopBhXxiP7-P9VJRKcOX-Hh05LRLw7gTYmMnK5RursoT9proGKlwxhBYKo95ROxoHU5bmGsUtgPok5isn1Prmnz6-1kPLHh0K4lUou9szDeLOyb81A0OAlZjvn0hqEcXL3ASqcSv5fuA1ZcHSc6-VSJsymJ2zEN3MIaCt4OwgzYpYwllMmhk_82Ov6TBfp8-kObu7jP-ATSE3q2udp22BfCzflIKPlsoeE1-sS56w"/>
+</div>
+</div>
+<div class="lg:col-span-5 lg:pl-12">
+<h3 class="font-display-lg text-display-lg uppercase mb-6">Alraj DXB</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">
+                        Leading the telecommunications frontier. Alraj DXB is an official retailer for giants like Samsung and Huawei, dominating the mobile retail space with unmatched authority.
+                    </p>
+<div class="flex gap-4">
+<span class="px-4 py-2 bg-white/5 rounded-lg font-label-bold uppercase text-[10px] tracking-widest">SAMSUNG PARTNER</span>
+<span class="px-4 py-2 bg-white/5 rounded-lg font-label-bold uppercase text-[10px] tracking-widest">HUAWEI OFFICIAL</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Digital Hub (Interactive Grid) -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-24">
+<h2 class="font-display-lg text-display-lg uppercase mb-4">Digital Ecosystem</h2>
+<div class="h-1 w-24 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Social Card -->
+<div class="glass-card p-10 group hover:scale-[1.02] transition-transform duration-500">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary">hub</span>
+<h3 class="font-display-lg text-headline-lg mb-4 uppercase">Connected</h3>
+<p class="font-body-md text-on-surface-variant mb-8">Direct access to the private network and latest insights from the heart of Dubai.</p>
+<div class="flex flex-col gap-4">
+<a class="flex justify-between items-center p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors" href="#">
+<span class="font-label-bold uppercase text-xs">Instagram</span>
+<span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+</a>
+<a class="flex justify-between items-center p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors" href="#">
+<span class="font-label-bold uppercase text-xs">LinkedIn</span>
+<span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+</a>
+</div>
+</div>
+<!-- News Card -->
+<div class="glass-card p-10 group hover:scale-[1.02] transition-transform duration-500 border-primary/20">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary" style="font-variation-settings: 'FILL' 1;">newspaper</span>
+<h3 class="font-display-lg text-headline-lg mb-4 uppercase">Press Room</h3>
+<p class="font-body-md text-on-surface-variant mb-8">Exclusive coverage of global shifts and industry-leading disruption.</p>
+<div class="aspect-video mb-6 relative overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" data-alt="A cinematic high-contrast close up of a digital news dashboard showing stock market trends and global business news. The lighting is cold with deep blacks and neon silver accents, creating a futuristic war-room aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1LLpFyTLpda17KXqky1ki8V7bsuAm_cEuTlRjvRziHCaqZXXP1PTCSlAHbH6ZC6EslfvsdbmaioBfBGKy90XiUpQ3OYM7oL7m-OTh5uVXBBOQGk7F4X2yhTaUq-PtO1XogJC5BX8FtPtoqjv3ipiKLv5JzCt6ZMVR1ednYJ0xoNe-vIORbbqSpih0ZVXwTY6sZnsbEST6BbW-qt3pxHEKg2ACTfZazEuwpZ6L6jCibT0mXTFM9g_9Oa8nGzaGDA7jjEe2C3UM9_I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+<span class="absolute bottom-4 left-4 font-label-bold text-xs uppercase bg-primary text-background px-2 py-1">New Release</span>
+</div>
+<a class="text-primary font-label-bold uppercase tracking-widest text-xs flex items-center gap-2" href="#">Read Media Kit <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+<!-- Investment Card -->
+<div class="glass-card p-10 group hover:scale-[1.02] transition-transform duration-500">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary">rocket_launch</span>
+<h3 class="font-display-lg text-headline-lg mb-4 uppercase">Ventures</h3>
+<p class="font-body-md text-on-surface-variant mb-8">Architecture of multi-million dollar portfolios and disruptive start-ups.</p>
+<div class="flex flex-col gap-4">
+<a class="flex justify-between items-center p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors" href="#">
+<span class="font-label-bold uppercase text-xs">Portfolio Review</span>
+<span class="material-symbols-outlined text-sm">trending_up</span>
+</a>
+<a class="flex justify-between items-center p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors" href="#">
+<span class="font-label-bold uppercase text-xs">Strategic Partners</span>
+<span class="material-symbols-outlined text-sm">CornersIn</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Story Section -->
+<section class="py-section-gap relative" id="story">
+<div class="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;q=80&amp;w=2000')] bg-fixed bg-cover opacity-5"></div>
+<div class="max-w-4xl mx-auto px-margin-mobile text-center relative z-10">
+<span class="font-label-bold text-primary tracking-[0.8em] uppercase mb-8 block">The Founder</span>
+<h2 class="font-display-lg text-display-lg mb-12 uppercase">Architect of Ambition</h2>
+<div class="space-y-8 font-body-lg text-on-surface-variant leading-relaxed text-xl">
+<p>Aziz Barbhaya is not just building businesses; he is sculpting the future of Dubai's commercial landscape. From the roar of luxury engines to the silence of a library cafe, his portfolio reflects a restless drive for excellence.</p>
+<p class="text-primary font-bold">"Success is a habit. Disruption is the strategy. Excellence is the only metric that matters."</p>
+<p>Starting with a vision to bridge the gap between global brands and local excellence, Aziz has cultivated a network that spans technology, lifestyle, and high-performance automotive services.</p>
+</div>
+</div>
+</section>
+<!-- Awards Section -->
+<section class="py-section-gap px-margin-desktop bg-surface-container-low" id="awards">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-display-lg text-headline-lg uppercase mb-16 tracking-widest text-center">Achievements &amp; Recognition</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="col-span-full flex justify-center">
+<div class="glass-card p-10 text-center flex flex-col items-center border border-tertiary-fixed/30 shadow-[0_0_50px_rgba(233,196,0,0.1)] hover:border-tertiary-fixed/60 transition-all duration-500 max-w-sm">
+<span class="material-symbols-outlined text-6xl mb-6 text-tertiary-fixed glow-blue">emoji_events</span>
+<span class="font-label-bold uppercase text-sm text-on-surface tracking-[0.2em] mb-2">Nelson Mandela Nobel Peace Award Winner</span>
+<div class="h-px w-12 bg-tertiary-fixed/50 my-4"></div>
+<p class="font-display-lg text-display-lg text-primary">2025</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Media Carousel Section -->
+<section class="py-section-gap overflow-hidden bg-black" id="media">
+<div class="px-margin-desktop mb-12 flex justify-between items-end">
+<h2 class="font-display-lg text-display-lg uppercase">In The Spotlight</h2>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex gap-gutter px-margin-desktop overflow-x-auto pb-12 no-scrollbar">
+<div class="min-w-[400px] aspect-video relative group overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0uiZp0sCCkNsosG4U65ZmprfEl5z3JqZbLy0vPKotCPn3EUl64Rk899C3_lhZkuYTMpOmFjaeuxLNs0PInP8DVWgYJOtxro7_PgrhK6eY6s8F41aXtinSLr0xXcR3CsJE6kdbWkQgBvRq-odq12mEHDNzTIjxepelPRVJxBKsFofwlGv9zq54gjQmOi7XdFWe0nzx6U9ZRFwAFFmD56ChnA-e2Shd6O3pYEcK_ofgifyS-dH7J6vciojrp0UIwkKsFtwDhwUVH8sMw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-8">
+<h3 class="font-display-lg text-headline-lg text-primary uppercase mb-2">NELSON MANDELA PEACE PRIZE AWARD</h3>
+<p class="font-body-md text-on-surface-variant max-w-md">Recognizing extraordinary contributions to global harmony and humanitarian excellence on the international stage.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap px-margin-desktop relative" id="contact">
+<div class="max-w-4xl mx-auto glass-card p-12 md:p-20 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[120px] rounded-full"></div>
+<div class="relative z-10">
+<h2 class="font-display-lg text-display-lg uppercase mb-4 text-center">Join the Mission</h2>
+<p class="font-body-lg text-on-surface-variant text-center mb-16 uppercase tracking-[0.3em]">Let's build something unstoppable.</p>
+<form class="space-y-12">
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary transition-all font-body-lg placeholder:text-on-surface-variant/30 text-white" placeholder="Your Name" type="text"/>
+</div>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary transition-all font-body-lg placeholder:text-on-surface-variant/30 text-white" placeholder="Professional Email" type="email"/>
+</div>
+<div class="relative">
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary transition-all font-body-lg placeholder:text-on-surface-variant/30 text-white resize-none" placeholder="The Vision (Briefly describe your venture)" rows="4"></textarea>
+</div>
+<div class="pt-8 text-center">
+<button class="chrome-button w-full md:w-auto px-16 py-6 font-label-bold rounded-full uppercase tracking-[0.2em]" type="submit">Initiate Contact</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface py-section-gap border-t border-outline-variant/30">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop w-full max-w-container-max mx-auto gap-8">
+<div class="text-center md:text-left">
+<a class="font-display-lg text-headline-lg text-primary uppercase mb-4 block" href="#">AZIZ BARBHAYA</a>
+<p class="font-body-md text-label-sm text-on-surface-variant max-w-xs opacity-60">© 2024 Aziz Barbhaya. All Rights Reserved. Built for the Unstoppable.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-margin-mobile">
+<a class="font-body-md text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Press Kit</a>
+<a class="font-body-md text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Investor Relations</a>
+</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>
